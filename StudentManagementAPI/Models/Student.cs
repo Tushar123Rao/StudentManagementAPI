@@ -4,7 +4,7 @@ namespace StudentManagementAPI.Models
 {
     public class Student
     {
-        public int Id { get; set; }
+        public int Id { get; set; } // primary key of the Student table
 
         [Required]
         [StringLength(50)]
@@ -15,6 +15,8 @@ namespace StudentManagementAPI.Models
 
         [Required]
         [StringLength(100)]
-        public string Course { get; set; }
+        public int CourseId { get; set; } // Foreign key CourseID which references Course.Id
+
+        public Course? Course { get; set; } // Navigation property which tells student table about the course table
     }
 }
