@@ -14,7 +14,6 @@ namespace StudentManagementAPI.Models
         public int Age { get; set; }
 
         [Required]
-        [StringLength(100)]
         public int CourseId { get; set; } // Foreign key CourseID which references Course.Id
 
         public Course? Course { get; set; } // Navigation property which tells student table about the course table

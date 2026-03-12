@@ -7,7 +7,7 @@ namespace studentManagementAPI.Repositories
     {
         private static List<Student> students = new List<Student>()
         {
-            new Student {Id = 1, Name = "Tushar", Age = 25, Course = ".NET"}
+            new Student {Id = 1, Name = "Tushar", Age = 25, CourseId = 1}
         };
 
         public List<Student> GetAllStudents()
